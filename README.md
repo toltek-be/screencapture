@@ -36,7 +36,10 @@ screencapture/
 ### 1. Construire l’image Docker
 
 ```bash
+#linux / macintel
 docker build -t screencapture .
+#mac puces arm 
+docker build --platform=linux/amd64 -t screencapture .
 ````
 
 ### 2. Lancer la capture
@@ -58,8 +61,6 @@ screenshot_iPhone_12_390x2940.png
 ---
 
 ## Script de lancement rapide
-
-Le fichier `run.sh` te permet d’exécuter rapidement :
 
 ```bash
 ./run.sh https://example.com 5
